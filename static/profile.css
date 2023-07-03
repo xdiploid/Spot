@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: black;
+}
+
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav_logo,
+.nav_link,
+.button{    
+    color: #fff;
+}
+
+.nav_logo {
+    font-size: 25px;
+}
+
+.nav_item{
+    column-gap: 50px;
+}
+
+
+.nav_link:hover {
+    color: #d9d9d9;
+}
+
+.button{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active{
+    transform: scale(0.98);
+    
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("cover.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-box{
+    /* top: -80px; */
+    background: white;
+    text-align: center;
+    padding: 40px 90px;
+    color: red;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+.menu-icon{
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.menu-icon:active {
+    transform: scale(0.95);
+}
+
+.setting-icon{ 
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.setting-icon:active {
+    transform: scale(0.95);
+}
+
+.profile-pic{
+    width: 150px;
+    border-radius: 50%;
+    background: red;
+    padding: 6px;
+    margin-top: 40px;
+}
+
+.profile-bottom{
+    background: white;
+    color: #999;
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+
+.profile-bottom img{
+    width: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.followers{
+    position: absolute;
+    margin-top: -20px;
+    left: 40px;
+    color: red;
+}
+
+.following{
+    position: absolute;
+    margin-top: -20px;
+    right: 40px;
+    color: red;
+}
+
+.followercount{
+    position: absolute;
+    left: 27px;
+    top: 30px;
+    color: orange;
+}
+
+.followingcount{
+    position: absolute;
+    right: 27px;
+    top: 30px;
+    color: orange;
+}
+
+
+
+
+
+.profile-box button{
+    background: white;
+    color: #ff574a;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(224, 67, 54, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    padding: 15px 60px;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: -50px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.profile-box button:active{
+    transform: scale(0.98);
+}
+
+
+
