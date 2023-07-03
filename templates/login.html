@@ -14,13 +14,13 @@
     <body>
         <header class="header">
             <nav class="nav">
-                <a href="login.html" class="nav_logo">Spot</a>
+                <a href="login" class="nav_logo">Spot</a>
 
                 <ul class="nav_items">
                     <li class="nav_item">
-                        <a href="login.html" class="nav_link">Home</a>
-                        <a href="profile.html" class="nav_link">Profile</a>
-                        <a href="map.html" class="nav_link">Map</a>
+                        <a href="login" class="nav_link">Home</a>
+                        <a href="profile" class="nav_link">Profile</a>
+                        <a href="map" class="nav_link">Map</a>
                     </li>
                 </ul>
                 
@@ -60,7 +60,7 @@
                     <button class="button">Login Now</button>
 
                     <div class="login_signup">
-                        Don't have an account? <a href="register.html" id="signup"> Register</a>
+                        Don't have an account? <a href="#" id="signup"> Register</a>
                     </div>
                     </form>
                     
@@ -105,6 +105,6 @@
             </div>
         </section>
 
-        <script src="../static/script.js"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>
