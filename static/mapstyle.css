@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-
 html {
     box-sizing: border-box;
     font-size: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 *, *::before, *::after {
@@ -11,10 +14,6 @@ html {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 body {
@@ -44,7 +43,6 @@ body {
     height: 100%;
     align-items: center;
     justify-content: space-between;
-
 }
 .nav_logo,
 .nav_link,
@@ -80,9 +78,106 @@ body {
 
 
 #map {
-    position: fixed;
+    position: relative;
     height: 100vh;
     padding-top: 0vh;
+    z-index: 1;
 }
+
+
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  #infowindow-content .title {
+    font-weight: bold;
+  }
+  
+  #infowindow-content {
+    display: none;
+  }
+  
+  #map #infowindow-content {
+    display: inline;
+  }
+  
+  .pac-card {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    font-family: Roboto;
+    padding: 0;
+  }
+  
+  #pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+  }
+  
+  .pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+  }
+  
+  .pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+ 
+#pac-input { 
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+  
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+  
+#title {
+   color: #fff;
+   background-color: #4d90fe;
+   font-size: 25px;
+   font-weight: 500;
+   padding: 6px 12px;
+}
+  
+#target {
+   width: 345px;
+}
+
+.controls {
+    position: relative;
+    left: 40.5%;
+    top: 15vh;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: block;
+    z-index: 2;
+
+  }
+
+  
+  
+
+
 
 

@@ -7,21 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Spot </title> 
         <link rel="stylesheet" href="../static/mapstyle.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     </head>
 
     <body>
-
-
-
-
-
-        <!-- <h1> Welcome to the Spot Map</h1> -->
-
-
-
         <header class="header">
             <nav class="nav">
-                <a href="login" class="nav_logo">Spot</a>
+                <a href="login.html" class="nav_logo">Spot</a>
 
                 <ul class="nav_items">
                     <li class="nav_item">
@@ -31,15 +23,18 @@
                     </li>
                 </ul>
                 
-                <button class="button" id="form-open"> Login </button>
+                <button class="button" id="form-open"> Logout </button>
             </nav>
         </header>
 
+        <input id="autocomplete" class="controls" type="text" placeholder="Enter a location"/>
+
         <div id="map"></div>
 
-        <script src="../static/mapscript.js"></script>
+        <script src="..static/mapscript.js"></script>
         <script 
-            src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdf0r5PhxboZYiVBKpEf-ZOjytDLbvvw&map_ids=d4e922012220403a&callback=initMap">
+            src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdf0r5PhxboZYiVBKpEf-ZOjytDLbvvw&map_ids=d4e922012220403a&libraries=places&callback=initMap"
+            async defer>
         </script>
 
     </body>
