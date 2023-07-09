@@ -94,13 +94,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/login')
+@app.route('/')
 def home():
-	return render_template('login.html')
-
-# @app.route('/login')
-# def login():
-#      return render_template('login.html')
+     return render_template('login.html')
 
 @app.route('/map')
 def map():
