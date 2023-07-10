@@ -28,13 +28,6 @@
             </nav>
         </header>
 
-    
-
-
-        
-
-
-        
         <section class="home">
             <div class="form_container">
                 <i class="uil uil-times form_close"></i>
@@ -42,44 +35,37 @@
                 <!-- Login Form -->
                 <div class="form login_form">
 
-
-<!-- 
-                    <form method="POST" action="">
-                        {{  form.hidden_tag()  }}
-                        {{  form.username  }}
-                        {{  form.password  }}
-                        {{  form.submit  }}
-                    </form> -->
-
-
-                    <form action="#">
+                    <form method = "POST" >
                         <h2>Login</h2>
-                    
+
                     <div class="input_box">
-                        <input type="email" placeholder="Enter your email" required />
+                        <input type="name" name="username" placeholder="Enter your username" required />
                         <i class="uil uil-envelope-alt email"></i>
                     </div>
+                    
 
                     <div class="input_box">
-                        <input type="password" placeholder="Enter your password" required/>
+                        <input type="password" name="password" placeholder="Enter your password" required/>
                         <i class="uil uil-lock password"></i>
                         <i class="uil uil-eye-slash pw_hide"></i>
                     </div>
 
                     <div class="option_field">
                         <span class="checkbox">
-                            <input type="checkbox" id="check">
+                            <!-- <input type="checkbox" id="check"> -->
                             <label for="check">Rememeber me</label>
 
                         </span>
                         <a href="forgotpassword.html" class="forgot_pw">Forgot password?</a>
                     </div>
 
-                    <button class="button">Login Now</button>
+                    <!-- <button class="button">Login Now</button> -->
 
                     <div class="login_signup">
                         Don't have an account? <a href="#" id="signup"> Register</a>
                     </div>
+
+                    <input type = "submit" value = "submit"/>
                     </form>
                     
                 </div>
@@ -87,33 +73,27 @@
 
                 <div class="form signup_form">
 
-                    <!-- <form method="POST" action="">
-                        {{  form.hidden_tag()  }}
-                        {{  form.username  }}
-                        {{  form.password  }}
-                        {{  form.submit  }}
-                    </form> -->
+                    
 
-
-                    <form action="#">
+                    <form method="POST" >
                         <h2>Register</h2>
                     
                     <div class="input_box">
-                        <input type="email" placeholder="Enter your email" required />
+                        <input type="name" name="username" placeholder="Enter your username" required />
                         <i class="uil uil-envelope-alt email"></i>
                     </div>
 
                     <div class="input_box">
-                        <input type="password" placeholder="Create your password" required/>
+                        <input type="password" name="password" placeholder="Create your password" required/>
                         <i class="uil uil-lock password"></i>
                         <i class="uil uil-eye-slash pw_hide"></i>
                     </div>
 
-                    <div class="input_box">
+                    <!-- <div class="input_box">
                         <input type="password" placeholder="Confirm your password" required/>
                         <i class="uil uil-lock password"></i>
                         <i class="uil uil-eye-slash pw_hide"></i>
-                    </div>
+                    </div> -->
 
                     
 
@@ -123,7 +103,7 @@
                         Already have an account? <a href="#" id="login"> Login</a>
                     </div>
 
-
+                    <input type = "submit" value = "submit"/>
                     </form>
                     
                 </div>

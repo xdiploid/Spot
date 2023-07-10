@@ -72,35 +72,49 @@
 #     return render_template('register.html')    
     
 
-# @app.route('/profile', methods=['GET', 'POST'])
-# def profile():
-#     return render_template('profile.html') 
 
-
-# @app.route('/map')
-# def map():
-#     return render_template('map.html')    
-
-
-# @app.route('/forgotpassword')
-# def forgotpassword():
-#     return render_template('forgotpassword.html')    
-
-
-# if __name__ == 'main':
-# 	app.run(debug=False)
-
-from flask import Flask, render_template
+import sqlite3
+from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+connect = sqlite3.connect('database.db')
+connect.execute(
+    'CREATE TABLE IF NOT EXISTS PARTICIPANTS (username TEXT, password TEXT)')
 
-@app.route('/')
+
+@app.route('/', methods=['GET', 'POST'])
 def home():
      return render_template('login.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-     return render_template('login.html')
+     if request.method == 'POST':
+          username = request.form['username']
+          password = request.form['password']
+
+          with sqlite3.connect("database.db") as users:
+            cursor = users.cursor()
+            cursor.execute("INSERT INTO PARTICIPANTS \
+            (username, password) VALUES (?,?)",
+                           (username, password))
+            users.commit()
+          
+          return render_template('profile.html')
+     
+     else:
+          return render_template('login.html')
+
+
+@app.route('/users')
+def participants():
+    connect = sqlite3.connect('database.db')
+    cursor = connect.cursor()
+    cursor.execute('SELECT * FROM PARTICIPANTS')
+  
+    data = cursor.fetchall()
+    return render_template("users.html", data=data)
+
 
 @app.route('/map')
 def map():
